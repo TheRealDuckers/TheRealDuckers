@@ -3,7 +3,7 @@
 Welcome! I'm Duckers, a passionate developer building web tools, automation, and creative solutions.  
 Explore my work below, or visit [duckwhizz.uk](https://duckwhizz.uk) for more about me and my projects.
 
-<img src="https://github-readme-stats.hackclub.dev/api/wakatime?username=20624&api_domain=hackatime.hackclub.com&&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8&theme=aura_dark>
+<img src="https://github-readme-stats.hackclub.dev/api/wakatime?username=20624&api_domain=hackatime.hackclub.com&&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8&theme=aura_dark">
 ---
 
 ## 🚀 Pinned Projects
