@@ -25,6 +25,7 @@ Qlab Alternative that runs in browser – WebCue
 Community project by Hack Club: "Just give it some time!"  
 Track and visualize time spent on projects.  
 Check out [hackatime.hackclub.com](https://hackatime.hackclub.com)
+
 ---
 ## 🤝 Connect
 
