@@ -38,6 +38,7 @@ Check out [hackatime.hackclub.com](https://hackatime.hackclub.com)
 
 - GitHub: [@TheRealDuckers](https://github.com/TheRealDuckers)
 - Website: [duckwhizz.uk](https://duckwhizz.uk)
+- Send me a message via GitHub Discussions [here](https://github.com/TheRealDuckers/TheRealDuckers/discussions/1)
 
 ---
 
