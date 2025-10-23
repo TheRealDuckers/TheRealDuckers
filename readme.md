@@ -8,18 +8,11 @@ Explore my work below, or visit [duckers.is-a.dev](https://duckers.is-a.dev) for
 
 ## 🚀 Pinned Projects
 
-### [PracticeBase](https://github.com/TheRealDuckers/PracticeBase)
-*A new project (HTML-based) by Duckers. Project details coming soon!*
-
-### [Synapse-AI](https://github.com/TheRealDuckers/Synapse-AI)
-> Artificial Intelligence experiments and tools.  
-> *Project recently started – README and features coming soon!*
-
 ### [WebCue](https://github.com/TheRealDuckers/WebCue)
 Qlab Alternative that runs in browser – WebCue
 
-### [timetable-share](https://github.com/TheRealDuckers/timetable-share)
-*A tool for sharing timetables. Details coming soon!*
+### [LyricShow](https://github.com/TheRealDuckers/LyricShow)
+A .lrc file displayer. Scroll, click and use .mp3 or youtube as the music scource.
 
 ### [hackclub/hackatime](https://github.com/hackclub/hackatime)
 Community project by Hack Club: "Just give it some time!"  
