@@ -12,6 +12,7 @@
   <script>document.documentElement.classList.add('js')</script>
   <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   <script src="https://unpkg.com/devtools-detect"></script>
+
 <script>
   AOS.init();
 </script>
@@ -71,7 +72,7 @@
 </head>
 <body class="bg-gray-950 text-gray-100">
 
-<div id="devtools-overlay" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex items-center justify-center z-50">
+<div id="devtools-overlay" style="display: none" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex items-center justify-center z-50">
   <div class="text-center text-white text-xl font-mono">
     Tee hee no code for you. (wrote that and then realised this hole thing is on Github...)
   </div>
@@ -177,20 +178,94 @@ h1 class="HTML_wizard"
   </footer>
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DevTools Detection</title>
+  <style>
+    #devtools-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: red;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div id="devtools-overlay">⚠️ DevTools is open!</div>
+
   <script>
-    const duck = document.getElementById('duck');
-    document.addEventListener('mousemove', e => {
-      duck.style.left = e.pageX + 'px';
-      duck.style.top = e.pageY + 'px';
-    });
-  </script>
-<script>
+    /*!
+      devtools-detect
+      Detect if DevTools is open
+      https://github.com/sindresorhus/devtools-detect
+      by Sindre Sorhus
+      MIT License
+    */
+    (function () {
+      'use strict';
+
+      const devtools = {
+        isOpen: false,
+        orientation: undefined
+      };
+
+      const threshold = 160;
+
+      const emitEvent = (isOpen, orientation) => {
+        window.dispatchEvent(new CustomEvent('devtoolschange', {
+          detail: {
+            isOpen,
+            orientation
+          }
+        }));
+      };
+
+      setInterval(() => {
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        const orientation = widthThreshold ? 'vertical' : 'horizontal';
+
+        if (
+          !(heightThreshold && widthThreshold) &&
+          ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)
+        ) {
+          if (!devtools.isOpen || devtools.orientation !== orientation) {
+            emitEvent(true, orientation);
+          }
+
+          devtools.isOpen = true;
+          devtools.orientation = orientation;
+        } else {
+          if (devtools.isOpen) {
+            emitEvent(false, undefined);
+          }
+
+          devtools.isOpen = false;
+          devtools.orientation = undefined;
+        }
+      }, 500);
+
+      window.devtools = devtools;
+    })();
+
+    // 🔔 Listen for DevTools open/close events
     window.addEventListener('devtoolschange', event => {
       const overlay = document.getElementById('devtools-overlay');
       if (event.detail.isOpen) {
         overlay.style.display = 'block';
+        console.log('DevTools opened:', event.detail.orientation);
       } else {
         overlay.style.display = 'none';
+        console.log('DevTools closed');
       }
     });
   </script>
