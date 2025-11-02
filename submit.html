@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="msvalidate.01" content="89A445535282DC8179976A86F14E3146" />
+  <title>Duckers | Web Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+  <script src="https://unpkg.com/devtools-detect@4.0.0/dist/devtools-detect.umd.js"></script>
+  <style>
+    body { font-family: 'Fira Code', monospace; cursor: none; }
+
+    /* Typing animation */
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid green;
+      white-space: nowrap;
+      animation: typing 3s steps(30, end), blink .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    /* Fade-in */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* Floating duck */
+    #duck {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.1s ease;
+    }
+
+  </style>
+  <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#183F11_100%)]"></div>
+  <section class="py-80 text-center  animate-fadeInUp">
+    <div class="max-w-2xl mx-auto typewriter">
+      <h1 class="text-4xl font-bold text-green-400 bg-gradient-to-l from-orange-500 via-green-500 to-blue-500 text-transparent bg-clip-text sm:text-6xl"> Form Submitted!</h1>
