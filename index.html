@@ -114,7 +114,7 @@
 <section class="max-w-5xl mx-auto py- px-6 animate-fadeInUp">
 </section>
 
-<div class="background">
+<div id="background" class="background">
 </div>
 <section class="max-w-3xl mx-auto py-16 px-6 animate-fadeInUp rounded p-4 mb-10 mb-10">
 <h1 class="text-2xl text-center mb-5">A bit about me...</h1>
@@ -372,6 +372,22 @@ h1 class="HTML_wizard"
         console.log('DevTools closed');
       }
     });
+  </script>
+    <!-- Load Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Load Vanta Halo -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+
+  <script>
+    VANTA.HALO({
+      el: "#background",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 1500.00,
+      minWidth: 1500.00,
+      baseColor: 0x5900
+    })
   </script>
 </body>
 </html>
