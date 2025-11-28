@@ -102,6 +102,53 @@
 </div>
 
 
+  <!-- Modal overlay + dialog -->
+  <div id="hackclub-modal" aria-hidden="true"
+       class="fixed inset-0 z-50 hidden">
+    <!-- Overlay -->
+    <div id="modalOverlay"
+         class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+
+    <!-- Dialog -->
+    <div role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+         class="relative mx-auto mt-24 w-[92%] max-w-md rounded-lg border-2 border-red-500 bg-gray-900 shadow-xl">
+      <div class="p-6">
+        <h2 id="modalTitle" class="text-xl font-bold text-red-500 tracking-wide">
+          A cool thing....
+        </h2>
+        <p class="mt-3 text-sm text-gray-300">
+          Enter the email you use for Hack Club (the one on identity.hackclub.com)
+        </p>
+
+        <!-- Input + Submit -->
+        <form id="hackForm" class="mt-4 space-y-3">
+          <input type="text" id="hackInput" name="hackInput"
+                 placeholder="Enter your email..."
+                 class="w-full rounded-md border border-red-500 bg-gray-800 px-3 py-2 text-sm text-gray-200 placeholder-gray-500 focus:border-red-400 focus:ring focus:ring-red-500 focus:ring-opacity-50" />
+
+          <button type="submit"
+                  class="w-full rounded-md bg-red-500 px-3 py-2 text-sm font-medium text-white hover:bg-red-600 transition">
+            make something happen
+          </button>
+        </form>
+
+        <div class="mt-5 flex justify-end">
+          <button id="closeModal"
+                  class="inline-flex items-center rounded-md border border-red-500 bg-gray-800 px-3 py-2 text-sm font-medium text-red-400 hover:bg-red-500 hover:text-white transition"
+               onclick="
+            const email = document.getElementById('hackInput').value;
+            fetch('https://hooks.slack.com/triggers/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', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: email })
+            })">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#183F11_100%)]"></div>
   <section class="py-80 text-center  animate-fadeInUp">
     <div class="max-w-2xl mx-auto typewriter">
@@ -126,7 +173,7 @@
 0 0 30px #00ff00; margin-bottom: 80px"  class="max-w-3xl mx-auto py-16 px-6 animate-fadeInUp rounded p-4 mb-10 mb-10">
 <h1 class="text-2xl text-center mb-5">A bit about me...</h1>
 <h2 class="text-center">Hi, I'm Duckers, a teen who loves coding and theatre. I am a member of <a href="https://hack.club" class="font-semibold hover:bg-sky-700">HackClub</a>, and love creating open scource tools and apps (see my <a href="github.com/TheRealDuckers" class="font-semibold hover:bg-sky-700">Github</a>), mostly related to theatre. This is a rather interesting site, try and find all the easter eggs....(no cheating, you devtools/inspecter....)</h2>
-<h1 style="margin-top: 20px" class="text-center">Member of HackClub? Click <a class="font-semibold hover:bg-red-700" href="https://hooks.slack.com/triggers/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" type="POST">here...</a>
+<h1 style="margin-top: 20px" class="text-center">Member of HackClub? Click <a class="font-semibold hover:bg-red-700" href="#hackclub-modal" id="openModal">here...</a>
 
 </section>
 
@@ -411,6 +458,48 @@ h1 class="HTML_wizard"
       minWidth: 1500.00,
       baseColor: 0x5900
     })
+  </script>
+  
+  
+
+  <script>
+    const openBtn = document.getElementById('openModal');
+    const modal = document.getElementById('hackclub-modal');
+    const closeBtn = document.getElementById('closeModal');
+    const overlay = document.getElementById('modalOverlay');
+    const form = document.getElementById('hackForm');
+    const input = document.getElementById('hackInput');
+
+    function openModal(e) {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      input.focus();
+      document.addEventListener('keydown', handleEsc);
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.removeEventListener('keydown', handleEsc);
+      openBtn.focus();
+    }
+
+    function handleEsc(e) {
+      if (e.key === 'Escape') closeModal();
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("You submitted: " + input.value);
+      input.value = "";
+      closeModal();
+    });
   </script>
 </body>
 </html>
