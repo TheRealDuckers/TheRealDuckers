@@ -3,7 +3,6 @@
 hello! I'm Duckers, a passionate developer building web tools, automation, and creative solutions.  
 Explore my work below, or visit [duckers.is-a.dev](https://duckers.is-a.dev) for more about me and my projects.
 
-{{ wakatimeDoubleCategoryBar "💾 Languages:" wakatimeData.Languages "💼 Projects:" wakatimeData.Projects 5 }}
 ---
 
 ## 🚀 Pinned Projects
