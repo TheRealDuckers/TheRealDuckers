@@ -3,7 +3,7 @@
 hello! I'm Duckers, a passionate developer building web tools, automation, and creative solutions.  
 Explore my work below, or visit [duckers.is-a.dev](https://duckers.is-a.dev) for more about me and my projects.
 
-<img src="https://github-readme-stats.hackclub.dev/api/wakatime?username=20624&api_domain=hackatime.hackclub.com&&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8&theme=aura_dark">
+{{ wakatimeDoubleCategoryBar "💾 Languages:" wakatimeData.Languages "💼 Projects:" wakatimeData.Projects 5 }}
 ---
 
 ## 🚀 Pinned Projects
