@@ -1,7 +1,7 @@
 # TheRealDuckers 🦆
 
 hello! I'm Duckers, a passionate developer building web tools, automation, and creative solutions.  
-Explore my work below, or visit [duckers.is-a.dev](https://duckers.is-a.dev) for more about me and my projects.
+Explore my work below, or visit [duckers.dev](https://duckers.dev) for more about me and my projects.
 
 ---
 
@@ -22,13 +22,13 @@ Check out [hackatime.hackclub.com](https://hackatime.hackclub.com)
 ## 🤝 Connect
 
 - GitHub: [@TheRealDuckers](https://github.com/TheRealDuckers)
-- Website: [duckwhizz.uk](https://duckwhizz.uk)
+- Website: [duckwhizz.uk](https://duckers.dev)
 - Send me a message via GitHub Discussions [here](https://github.com/TheRealDuckers/TheRealDuckers/discussions/1)
 ---
 
 ## 🦆 About Me
 
-- **Personal site & blog:** [duckwhizz.uk](https://duckwhizz.uk)
+- **blog:** [have a look at it here](https://blog.duckers.dev)
 - Building creative automation, web utilities, and community tools
 - Always learning, iterating, and working with AI and open source
 
