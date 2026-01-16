@@ -1,24 +1,11 @@
 # Quack! 🦆
+<p>
+Yo! I'm duckers, and i write code, sing, and create ~problems~ cool projects!
 
-Hi  I'm Duckers, a teenager web dev, problem solver and problem creator.
-I love theatre and coding, which some people say is a really strange combo, and you know what i say to that? Yes, it probably is. 
+You can contact me like a creepy wiredo by mail-e: <a href="mailto:quack@duckers.dev">quack@duckers.dev</a>
+I have a site on the web! (its at <a href="https://duckers.dev">duckers.dev</a>, thanks for asking.)
+And i occasionaly write <a href="https://blog.duckers.dev">blog posts</a>.
+Also, if you are a member of Hack Club, you can msg me on the Slack  -  @Duckers
 
-Anyway, i should probably keep this short because its a github bio and they are always short... one last thing though - are you a lawyer? i need help. my cup of tea just filed a police report againt me - said it had been mugged!
 
----
-## 🤝 Connect
 
-- GitHub: [@TheRealDuckers](https://github.com/TheRealDuckers)
-- Website: [duckers.dev](https://duckers.dev)
-- Send me a message via GitHub Discussions [here](https://github.com/TheRealDuckers/TheRealDuckers/discussions/1)
----
-
-## 🦆 About Me
-
-- **blog:** [have a look at it here](https://blog.duckers.dev)
-- Building creative automation, web utilities, and community tools
-- Always learning, iterating, and working with AI and open source
-
----
-
-*Want to see more? Visit my website for project highlights, contact info, or to collaborate!*
