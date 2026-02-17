@@ -1,4 +1,5 @@
 # Quack! 🦆
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=004627&background=FFFFFF00&center=true&vCenter=true&random=true&width=435&lines=I+am+a+Web+Designer;I+am+a+Singer;I+am+a+UI+creator;I+am+a+Canva+Master;I+play+Guitar!)](https://git.io/typing-svg)
 <p>
 Yo! I'm duckers, and i write code, sing, and create ~problems~ cool projects!
 
